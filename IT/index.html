@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calmed</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: whitesmoke;
+        }
+
+        nav {
+            background-color: white;
+            position: relative;
+            bottom: 10px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-top: 20px;
+            margin-right: 5px;
+            padding: 20px;
+            float: left;
+            font-size: 15px;
+            position: relative;
+            bottom: 25px;
+            height: 8px;
+            list-style-type: none;
+            color: #6f4e37;
+            background-color: white;
+            transition: background-color 0.7s ease-in;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        ul li:hover {
+            cursor: pointer;
+            background-color: whitesmoke;
+            border-bottom: 1px solid black;
+            color: black;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .video-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+
+        .quote-container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            text-align: center;
+            color: white;
+        }
+
+        .quote-container h1 {
+            font-size: 40px;
+            margin: 20px 0;
+            font-family: "Playwrite DE Grund", cursive;
+        }
+
+        .quote {
+            font-family: "Playwrite DE Grund", cursive;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-top: 90px;
+        }
+
+        .text-container {
+            animation: changeText 50s infinite alternate;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            opacity: 0;
+            color: white;
+            font-size: 20px;
+        }
+
+        .text-container:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .text-container:nth-child(2) {
+            animation-delay: 10s;
+        }
+
+        .text-container:nth-child(3) {
+            animation-delay: 20s;
+        }
+
+        .text-container:nth-child(4) {
+            animation-delay: 30s;
+        }
+
+        .text-container:nth-child(5) {
+            animation-delay: 40s;
+        }
+
+        @keyframes changeText {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .services {
+            font-family: "Playwrite DE Grund", cursive;
+            width: 1000px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+
+        .service-box {
+            background-color: #b09684;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            
+        }
+
+        .service-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 3px 0 rgba(0, 0, 0, 0.6);
+        }
+
+        .service-box h3 {
+            margin: 0;
+        }
+
+        .copyright {
+            font-family: "Playwrite DE Grund", cursive;
+            background-color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .social-icons a {
+            margin: 10px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <img style="position: relative;right:800px;" src="slogo.png" height="70px" width="80px"
+                alt="s=spitritual with a hidden meditation symbol">
+
+            <B>
+                <a href="index.html">
+                    <li style="left: 600px;border-bottom: 1px solid black;">Home</li>
+                </a>
+                <a href="learnwithus.html">
+                    <li style="left: 600px;">Meditational learning</li>
+                </a>
+                <a href="spiritual.html">
+                    <li style="left: 600px;">Spiritual learning</li>
+                </a>
+                <a href="music.html">
+                    <li style="left: 600px;">Music</li>
+                </a>
+                <a href="video.html">
+                    <li style="left: 600px;">Video</li>
+                </a>
+                <a href="gallery.html">
+                    <li style="left: 600px;">Gallery </li>
+                </a>
+                <a href="contacts.html">
+                    <li style="left: 600px;"> Contact us</li>
+                </a>
+            </B>
+        </ul>
+    </nav>
+    <section id="Home">
+        <div class="video-container">
+            <img src="home.jpg" alt="pic" width="1200">
+           
+            <div class="quote-container">
+                <h1 style="backdrop-filter: blur(6px);color: black;">Welcome to Mystic Awakening</h1>
+                <p style="font-size: large;font-family: system-ui cursive;backdrop-filter: blur(6px);color: black;"> A place where you find peace and comfort...</p>
+                <div class="quote">Quotes</div>
+                <div class="text-container">“The way is not in the sky; the way is in the heart.”</div>
+                <div class="text-container">“The wound is the place where the Light enters you.”</div>
+                <div class="text-container">“Let the breath lead the way.”</div>
+                <div class="text-container">“Hope is praying for rain, but faith is bringing an umbrella.”</div>
+                <div class="text-container">“If god is all you have, you have all you need.”</div>
+            </div>
+        </div>
+
+        <div class="services">
+            <center>
+                <h1 style="font-size: 40px;">Our services</h1>
+            </center>
+            <hr>
+            <div class="service-box">
+                <center>
+                    <h3>Build knowledge</h3>
+                    <p>"Empowering minds with a world of knowledge within your reach."</p>
+                </center>
+            </div>
+            <div class="service-box">
+                <center>
+                    <h3>Relax</h3>
+                    <p>"Music, videos, and pictures create a perfect harmony for unwinding and rejuvenation."</p>
+                </center>
+            </div>
+            <div class="service-box">
+                <center>
+                    <h3>Explore yourself</h3>
+                    <p>"Writing your thoughts unveils the depths of your inner world."</p>
+                </center>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <hr>
+            <p style="color: #6f4e37;">&copy; 2024. Your Mystic Awakening. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calmed</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            padding: 0%;
+            margin: 0%;
+        }
+        body {
+            background-color: whitesmoke;
+        }
+        nav {
+            background-color: white;
+            position: relative;
+            bottom: 10px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-top: 20px;
+            margin-right: 5px;
+            padding: 20px;
+            float: left;
+            font-size: 15px;
+            position: relative;
+            bottom: 25px;
+            height: 8px;
+            list-style-type: none;
+            color: #6f4e37;
+            background-color: white;
+            transition: background-color 0.7s ease-in;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        ul li:hover {
+            cursor: pointer;
+            background-color: whitesmoke;
+            border-bottom: 1px solid black;
+            color: black;
+        }
+        .contact {
+            background-color: #f8eeeb;
+            position: relative;
+            width: 1000px;
+            height: 500px;
+            left: 230px;
+            top:50px;
+        }
+        .contact-form {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .contact-form h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            width: 300px;
+            color: #333;
+        }
+        .contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form input[type="email"] {
+            width: 40%;
+            height: 30px;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        .contact-form input[type="submit"] {
+            width: 70%;
+            padding: 10px;
+            background-color: #f39acb;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #f8b7db;
+        }
+        .authors-note {
+            background-color: #8a654b; /* Coffee color */
+            color: #f8b7db; /* Pink color */
+            position: relative;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 600px;
+            left:380px;
+            height:330px;
+            top:130px;
+        }
+        .authors-note h2 {
+            color: #f39acb; /* A slightly different pink for the heading */
+        }
+        .authors-note p {
+            color: #f8eeeb; /* A light color for the text */
+        }
+        .copyright .social-icons a {
+            margin:  10px;
+        }
+        .copyright .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <img style="position: relative;right:800px;" src="slogo.png" height="70px" width="80px"
+            alt="s=spitritual with a hidden meditation symbol">
+            <b>
+                <a href="index.html"><li style="left: 600px;">Home</li></a>
+                <a href="learnwithus.html"><li style="left: 600px;">Meditational learning</li></a>
+                <a href="spiritual.html"><li style="left: 600px;">Spiritual learning</li></a>
+                <a href="music.html"><li style="left: 600px;">Music</li></a>
+                <a href="video.html"><li style="left: 600px;">Video</li></a>
+                <a href="gallery.html"><li style="left: 600px;">Gallery</li></a>
+                <a href="contacts.html"><li style="left: 600px;border-bottom: 1px solid black;">Contact us</li></a>
+            </b>
+        </ul>
+    </nav>
+    <div class="contact">
+        <center>
+            <form class="contact-form" id="contactForm">
+                <h2>Contact Us</h2>
+                <label for="Email">Email id</label>
+                <input type="email" id="Email" name="Email" placeholder="Enter email" required>
+                <br><br><br>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Enter your feedback." required></textarea>
+                <p>Phone number: +977 9053565780
+                    <br>
+                    <a href="https://mail.google.com/mail/u/0/#inbox">Email: mysticawaking@gmail.com</a>
+                </p>
+                <input type="submit" value="Send Message">
+            </form>
+        </center>
+    </div>
+    <br>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent the form from submitting the traditional way
+            alert("Your message has been sent!");
+            // Here you can add AJAX code to submit the form data without reloading the page
+            const formData = new FormData(this);
+            fetch('/submit_contact', {
+                method: 'POST',
+                body: formData
+            }).then(response => {
+                if (response.ok) {
+                    console.log('Form successfully submitted');
+                } else {
+                    console.error('Error submitting form');
+                }
+            }).catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
+
+    <div class="authors-note">
+        <center><h2>Author's Note</h2></center>
+        <p>Thank you for visiting our website. Your feedback is very important to us, and we strive to provide the best experience possible. Please do not hesitate to reach out if you have any questions or suggestions. Your support is greatly appreciated!</p>
+        <br>
+        <p>Motive behind this website is making people know inner peace, purpose, and emotional stability through practices like meditation.And foster community and connection, providing ethical guidance and promoting personal growth.
+        </p>
+        <br>
+        <p> By encouraging virtues like compassion, this website is designed to help  individuals navigate life's challenges with balance and understanding, ultimately enhancing overall well-being and a sense of fulfillment.
+        </p>
+        <br>
+    </div>
+    <div class="copyright" style="height: 80px;position: relative;top:200px; font-family: Playwrite DE Grund, cursive;background-color: white;">
+ 
+        <hr>
+        <center><p style="color: #6f4e37;">&copy; 2024. Your Mystic Awakening. All Rights Reserved.</p></center>
+        <div class="row">
+           <center><div class="social-icons">
+          
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
+            </div></center>
+        </div>
+    </body>
+    </html>
